@@ -153,7 +153,7 @@ class CacheBusterService extends BaseApplicationComponent
 
 		if (! $filePath)
 		{
-			CacheBusterPlugin::log('Could not find your asset file (value provided was \'' . $file . '\' and we looked for the file at \'' . $rootPath . $file . '\')', LogLevel::Error);
+			CacheBusterPlugin::log('Could not find your asset file (value provided was \'' . $file . '\' and we looked for the file at \'' . CRAFT_BASE_PATH . $file . '\')', LogLevel::Error);
 			return $file;
 		}
 
