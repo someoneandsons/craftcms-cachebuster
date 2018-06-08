@@ -149,9 +149,7 @@ class CacheBusterService extends BaseApplicationComponent
 		}
 
 		$separator = '?' . $queryString;
-		// todo: should I be grabbing the root differently?
-		$rootPath  = $_SERVER['DOCUMENT_ROOT'];
-		$filePath  = realpath($rootPath . $file);
+		$filePath  = realpath(CRAFT_BASE_PATH . $file);
 
 		if (! $filePath)
 		{
